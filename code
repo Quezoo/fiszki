@@ -1,0 +1,80 @@
+#include <iostream>
+#include <windows.h>
+#include <cstdlib>
+#include <random>
+#include <locale.h>
+
+using namespace std;
+
+string jeden, jedenh, dwa, dwah, trzy, trzyh;
+string jedenodp, dwaodp, trzyodp;
+
+int main()
+{
+    HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+    setlocale(LC_ALL, "polish");
+
+
+    SetConsoleTextAttribute(h, 12);
+    cout << "WITAJ W FISZKACH POLSKO-HISZPAŃSKICH" << endl;
+    Sleep(1000);
+    SetConsoleTextAttribute(h, 15);
+    cout << "Jest to wersja demonstracyjna, mogąca pomieścić 10 słówek" << endl;
+    cout << "Zaraz wypiszesz 10 par wyrazów, polskich i hiszpańskich, a następnie przetestujesz swoją pamięć" << endl;
+    cout << endl;
+    cout << endl;
+    Sleep(2500);
+
+    SetConsoleTextAttribute(h, 12);
+    cout << "Podaj wyraz po polsku" << endl;
+    SetConsoleTextAttribute(h, 15);
+    cin >> jeden;
+
+    SetConsoleTextAttribute(h, 12);
+    cout << "Podaj wyraz po hiszpańsku" << endl;
+    SetConsoleTextAttribute(h, 15);
+    cin >> jedenh;
+    cout << endl;
+
+    SetConsoleTextAttribute(h, 12);
+    cout << "Podaj wyraz po polsku" << endl;
+    SetConsoleTextAttribute(h, 15);
+    cin >> dwa;
+
+    SetConsoleTextAttribute(h, 12);
+    cout << "Podaj wyraz po hiszpańsku" << endl;
+    SetConsoleTextAttribute(h, 15);
+    cin >> dwah;
+    cout << endl;
+
+    SetConsoleTextAttribute(h, 12);
+    cout << "Podaj wyraz po polsku" << endl;
+    SetConsoleTextAttribute(h, 15);
+    cin >> trzy;
+
+    SetConsoleTextAttribute(h, 12);
+    cout << "Podaj wyraz po hiszpańsku" << endl;
+    SetConsoleTextAttribute(h, 15);
+    cin >> trzyh;
+    cout << endl;
+
+    Sleep(700);
+    SetConsoleTextAttribute(h, 12);
+    cout << "Rozpoczynamy fiszki" << endl;
+    cout << "Przetlumacz: " << jedenh << endl;
+    cin >> jedenodp;
+    if (jedenodp == jeden)
+    {
+
+        cout << "Poprawnie" << endl;
+    }
+    else
+    {
+        cout << "Blad!" << endl;
+    }
+
+
+
+
+    return 0;
+}
